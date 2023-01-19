@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>MR.Witsarut</h1>
+    <input type="text" name="" id="name">
+    <button onclick="checkinput()">SUBMIT</button>
+    <h2 id="demo"></h2>
+
+    <select name="" id="myselect" onchange="changebet()">
+        <option value="Polybet999">Polybet999</option>
+        <option value="ITbet789">ITbet789</option>
+        <option value="AJBET168">AJBET168</option>
+        <option value="Polyufa159">Polyufa159</option>
+    </select>
+    <h2 id="demo2"></h2>
+    <hr>
+
+    <table class="table" id="tableedit">
+        <thead>
+          <tr>
+            <th scope="col">ระดับ</th>
+            <th scope="col">คะแนนเกณฑ์</th>
+            <th scope="col">เกรด</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>80-100</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>75-79</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>70-74</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>65-69</td>
+            <td>C+</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>60-64</td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>55-59</td>
+            <td>D+</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>50-54</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>0-49</td>
+            <td>E</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <center>
+        <h1>กรุณากรอกเกรดคะแนน</h1>
+        <input type="text" name="" id="points">
+        <button onclick="gradnput()" class="btn btn-success">ตกลง</button>
+        <h2 id="grad"></h2>
+      </center>
+      <hr>
+</body>
+<script>
+    function checkinput(){
+        var input = document.getElementById("name").value;
+        if(input == "100"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "แต้ม";
+        }else if(input == "50"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "แต้ม";
+        }else{
+            document.getElementById("demo").innerHTML = "ข้อมูลไม่ถูก";
+        }
+    }
+    function changebet(){
+        var x = document.getElementById("myselect").value;
+        document.getElementById("demo2").innerHTML = "YOU SELECT : "+x;
+    }
+    function gradnput(){
+      var input = document.getElementById("points").value;
+      if(input >= 80){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด A";
+      }else if(input >= 75){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด B+";
+      }else if(input >= 70){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด B";
+      }else if(input >= 65){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด C+";
+      }else if(input >= 60){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด C";
+      }else if(input >= 55){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด D+";
+      }else if(input >= 50){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด D";
+      }else if(input <= 49){
+          document.getElementById("grad").innerHTML = "คะแนนของคุณ " + input + " เกรด E";
+      }else{
+          document.getElementById("grad").innerHTML = "ข้อมูลไม่ถูก";
+      }
+  }
+</script>
+</html>
